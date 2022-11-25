@@ -11,12 +11,22 @@ config_version=4
 [application]
 
 config/name="godot-project"
-run/main_scene="res://test_scene.tscn"
+run/main_scene="res://MainScene.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="godot-project"
 
 [physics]
 
