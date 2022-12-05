@@ -1,0 +1,18 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_right = 309.0
+margin_bottom = 29.0
+value = 10.0
+__meta__ = {
+"_editor_description_": "Barre de progression du jeu."
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 85.0
+margin_top = -15.0
+margin_right = 223.0
+margin_bottom = 25.0
+text = "Température globale"
