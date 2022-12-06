@@ -15,3 +15,5 @@ texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 1 )
 texture_disabled = ExtResource( 1 )
 texture_focused = ExtResource( 1 )
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
