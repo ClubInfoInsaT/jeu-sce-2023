@@ -20,7 +20,9 @@ func _process(delta):
 	currentTime = 0
 	randomize()
 	
-	var newPos = Vector2(rand_range(0, map.texture.get_width())*map.scale[0]+map.position[0]-map.texture.get_width()*map.scale[0]/2, rand_range(0, map.texture.get_height())*map.scale[1]+map.position[1]-map.texture.get_height()*map.scale[1]/2 ) 
+	# Adjusting new position to fit the desired area
+	var newPos = Vector2( rand_range ( 0 , map.texture.get_width() ) * map.scale[0] + map.position[0] - map.texture.get_width()  * map.scale[0] / 2,
+						  rand_range ( 0 , map.texture.get_height() )* map.scale[1] + map.position[1] - map.texture.get_height() * map.scale[1] / 2 ) 
 	print(newPos)
 	var challengeButton = ChallengeButton.instance()
 	challengeButton.set_position(newPos)
