@@ -6,11 +6,11 @@
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource( 2 )
-timeBeforeNewChallenge = 5.0
+timeBeforeNewChallenge = 0.1
 
 [node name="Map" type="Sprite" parent="."]
 position = Vector2( 640, 360 )
-scale = Vector2( 3.1375, 3.1375 )
+scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
 
 [node name="Node2D" parent="." instance=ExtResource( 3 )]

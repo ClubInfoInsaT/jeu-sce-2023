@@ -6,7 +6,7 @@ const ChallengeButtonScene = "res://NewChallengeButton.tscn"
 var ChallengeButton
 var map
 export(float) var timeBeforeNewChallenge = 1.0
-var currentTime = 0
+var currentTime = timeBeforeNewChallenge
 func _ready():
 	map = find_node("Map")
 	ChallengeButton = preload(ChallengeButtonScene)
