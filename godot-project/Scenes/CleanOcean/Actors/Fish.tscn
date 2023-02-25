@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/CleanOcean/Actors/Fish.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GFX/CleanOcean/fish.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 4 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 0, -56 )
+
+[node name="Fish" type="KinematicBody2D"]
+position = Vector2( 488, 512 )
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Fish" type="Sprite" parent="."]
+position = Vector2( 8.60714, -3.30304 )
+scale = Vector2( 0.0787857, 0.0732636 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 32, -4 )
+shape = SubResource( 1 )
+
+[node name="FishDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishDetector"]
+modulate = Color( 1, 0, 1, 1 )
+position = Vector2( -16, 8 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -16, -4 )
+
+[connection signal="body_entered" from="FishDetector" to="." method="_on_FishDetector_body_entered"]

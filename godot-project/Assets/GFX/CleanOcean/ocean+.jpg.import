@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bar_cursor.png-97655f43cfac3a3d6d0a80fb1e23d989.stex"
+path="res://.import/ocean+.jpg-5f4779868feafaee6723aa0db22144f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/UI/bar_cursor.png"
-dest_files=[ "res://.import/bar_cursor.png-97655f43cfac3a3d6d0a80fb1e23d989.stex" ]
+source_file="res://Assets/GFX/CleanOcean/ocean+.jpg"
+dest_files=[ "res://.import/ocean+.jpg-5f4779868feafaee6723aa0db22144f5.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

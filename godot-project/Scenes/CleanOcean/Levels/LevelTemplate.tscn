@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/CleanOcean/Actors/Fish.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/CleanOcean/Actors/Player1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/CleanOcean/Actors/Plastic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/GFX/CleanOcean/ocean+.jpg" type="Texture" id=4]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 104.0
+margin_top = 8.0
+margin_right = 908.0
+margin_bottom = 2700.0
+texture = ExtResource( 4 )
+
+[node name="Player1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 2392 )
+
+[node name="Plastic2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 1992 )
+
+[node name="Plastic" parent="." instance=ExtResource( 3 )]
+position = Vector2( 560, 2304 )
+
+[node name="Plastic3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 392, 1800 )
+
+[node name="Fish" parent="." instance=ExtResource( 1 )]
+position = Vector2( 865, 2344 )
+
+[node name="Fish2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 874, 1568 )
+
+[node name="Fish3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 136, 2144 )
+
+[node name="Fish4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 130, 1424 )
+
+[node name="Fish5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 874, 1072 )
+
+[node name="Plastic4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 656, 640 )
+
+[node name="Plastic5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 280, 1410 )
+
+[node name="Plastic6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 664, 1296 )
+
+[node name="Plastic7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 440, 1624 )
+
+[node name="Plastic8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 488, 760 )
+
+[node name="Plastic9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 327, 440 )
+
+[node name="Plastic10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 344, 904 )

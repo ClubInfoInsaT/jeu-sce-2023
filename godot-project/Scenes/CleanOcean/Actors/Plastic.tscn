@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/CleanOcean/Actors/Plastic.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GFX/CleanOcean/plastic.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 12 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 0, -16 )
+b = Vector2( 0, 24 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( 0, -16 )
+b = Vector2( 0, 16 )
+
+[node name="Plastic" type="KinematicBody2D"]
+position = Vector2( 488, 512 )
+collision_layer = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Plastic" type="Sprite" parent="."]
+position = Vector2( 0, 3.1661 )
+scale = Vector2( 0.0197368, 0.0169387 )
+texture = ExtResource( 2 )
+
+[node name="PlasticBody" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4 )
+shape = SubResource( 1 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 0, 4 )
+scale = Vector2( 1.6, 2 )
+z_index = -4
+process_parent = true
+physics_process_parent = true
+
+[node name="CatchDetector" type="Area2D" parent="."]
+
+[node name="RightWall" type="CollisionShape2D" parent="CatchDetector"]
+modulate = Color( 1, 0, 1, 1 )
+position = Vector2( 16, 0 )
+shape = SubResource( 2 )
+
+[node name="LeftWall" type="CollisionShape2D" parent="CatchDetector"]
+modulate = Color( 1, 0, 1, 1 )
+position = Vector2( -16, 0 )
+shape = SubResource( 2 )
+
+[node name="BottomWall" type="CollisionShape2D" parent="CatchDetector"]
+modulate = Color( 1, 0.00392157, 1, 1 )
+position = Vector2( 0, 24 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="TopWall" type="CollisionShape2D" parent="CatchDetector"]
+modulate = Color( 1, 0.00392157, 1, 1 )
+position = Vector2( 0, -16 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="CatchDetector" to="." method="_on_CatchDetector_body_entered"]
